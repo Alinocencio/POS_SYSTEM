@@ -75,7 +75,7 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    margin-left: 250px; /* Add this to offset the fixed sidebar */
+    margin-left: 250px;
 }
 
 .card {
@@ -117,7 +117,7 @@ body {
     margin-right: 5px;
 }
 
-/* Section visibility */
+
 .section-content {
     display: none;
 }
