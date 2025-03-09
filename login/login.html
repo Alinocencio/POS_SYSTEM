@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEUR CANTEEN - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 left-panel">
+                <div class="logo-container">
+                    <img src="/api/placeholder/200/200" alt="FEU Roosevelt Logo" class="feur-logo">
+                    <h1 class="system-name">FEUR CANTEEN</h1>
+                </div>
+            </div>
+            <div class="col-md-6 right-panel">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">Welcome!</h2>
+                    <div class="login-type-selector mb-4">
+                        <div class="btn-group w-100" role="group">
+                            <button type="button" class="btn login-type-btn active" id="admin-btn">Admin</button>
+                            <button type="button" class="btn login-type-btn" id="cashier-btn">Cashier</button>
+                        </div>
+                    </div>
+                    
+                    <form id="login-form">
+                        <div class="form-group mb-3">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                                <button class="btn btn-outline-secondary" type="button" id="toggle-password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn login-btn">Login</button>
+                        </div>
+                    </form>
+                    
+                    <div class="login-footer text-center mt-5">
+                        <p>&copy; 2025 FEU Roosevelt Canteen Management System</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

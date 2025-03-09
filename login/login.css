@@ -1,0 +1,160 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css');
+
+:root {
+    --feur-green: #006241;
+    --feur-gold: #FFD700;
+    --feur-dark-green: #00462f;
+    --feur-light-green: #008255;
+    --feur-light-gold: #FFE54C;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-fluid, .row {
+    height: 100%;
+}
+
+/* Left Panel (Logo) */
+.left-panel {
+    background-color: var(--feur-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2rem;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.feur-logo {
+    max-width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.system-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--feur-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Panel (Login Form) */
+.right-panel {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    color: var(--feur-green);
+    font-weight: 600;
+}
+
+/* Login Type Selector */
+.login-type-selector .btn-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login-type-btn {
+    color: var(--feur-green);
+    background-color: #f1f1f1;
+    border: none;
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+}
+
+.login-type-btn.active {
+    background-color: var(--feur-green);
+    color: white;
+    font-weight: 500;
+}
+
+.login-type-btn:hover:not(.active) {
+    background-color: #e2e2e2;
+}
+
+/* Form Elements */
+.form-group label {
+    color: var(--feur-dark-green);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+
+.form-control:focus {
+    border-color: var(--feur-green);
+    box-shadow: 0 0 0 0.25rem rgba(0, 98, 65, 0.25);
+}
+
+.login-btn {
+    background-color: var(--feur-green);
+    color: white;
+    padding: 0.75rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover, .login-btn:focus {
+    background-color: var(--feur-dark-green);
+    color: white;
+}
+
+.forgot-password {
+    color: var(--feur-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    color: var(--feur-dark-green);
+    text-decoration: underline;
+}
+
+.login-footer {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .container-fluid, .row {
+        height: auto;
+    }
+    
+    .left-panel {
+        min-height: 250px;
+    }
+    
+    .right-panel {
+        padding: 2rem 1rem;
+    }
+}

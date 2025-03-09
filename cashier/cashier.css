@@ -1,0 +1,230 @@
+/* Customer Order Page Styles */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* FEU Colors */
+:root {
+    --feu-green: #006633;
+    --feu-gold: #ffcc00;
+    --feu-light: #f0f4f7;
+    --text-color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.category-btn {
+    transition: all 0.3s ease;
+}
+
+.category-btn.active {
+    background-color: var(--feu-green) !important;
+    color: white !important;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+}
+
+.product-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--feu-green);
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: var(--feu-green);
+    font-weight: bold;
+}
+
+.btn-add-to-order {
+    background-color: var(--feu-green);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-add-to-order:hover {
+    background-color: var(--feu-gold);
+    color: var(--feu-green);
+    transform: scale(1.05);
+}
+
+.order-summary {
+    position: sticky;
+    top: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.order-items-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.order-item {
+    transition: background-color 0.2s ease;
+}
+
+.order-item:hover {
+    background-color: rgba(0, 102, 51, 0.05);
+}
+
+.quantity-control {
+    margin-top: 5px;
+}
+
+/* Search input styling */
+#search-input {
+    border-radius: 20px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--feu-green);
+}
+
+#search-input:focus {
+    box-shadow: 0 0 10px rgba(0,102,51,0.2);
+    border-color: var(--feu-gold);
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: var(--feu-green);
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Customer number styling */
+.customer-info {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--feu-green);
+}
+
+/* Void all button styling */
+#void-all {
+    transition: all 0.3s ease;
+}
+
+#void-all:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Payment buttons styling */
+.payment-btn {
+    padding: 15px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Transaction complete icon */
+.fa-check-circle {
+    color: var(--feu-green);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Accessibility focus states */
+*:focus {
+    outline: 3px solid var(--feu-gold);
+    outline-offset: 2px;
+}
+
+
+
+
+/* Order type styling */
+.order-type-section {
+    background-color: var(--feu-light);
+    border-radius: 0;
+}
+
+.btn-check:checked + .btn-outline-success {
+    background-color: var(--feu-green);
+    color: white;
+}
+
+.btn-check + .btn-outline-success {
+    border-color: var(--feu-green);
+    color: var(--feu-green);
+}
+
+.btn-check:focus + .btn-outline-success, 
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 102, 51, 0.25);
+}
+
+.order-type-display .badge {
+    font-size: 1rem;
+    padding: 8px 16px !important;
+}
+
+/* Error styling for when order type is not selected */
+.order-type-error {
+    border: 2px solid #dc3545;
+    border-radius: 8px;
+    animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
